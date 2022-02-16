@@ -77,7 +77,7 @@ const MainHeader = styled.div`
 
 const DesktopNav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1rem, 2vw + 1rem, 3rem);
   margin: 0px 48px;
 
   @media(${QUERY.tabletAndSmaller}) {
@@ -121,6 +121,5 @@ const NavLink = styled.a`
     color: ${COLORS.secondary};
   }
 `;
-
 
 export default Header;
