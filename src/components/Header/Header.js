@@ -4,6 +4,7 @@ import styled from 'styled-components/macro';
 import { QUERY } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
+import NavLink from '../NavLink';
 import MobileMenu from '../MobileMenu';
 import VisuallyHidden from '../VisuallyHidden';
 import Icon from '../Icon';
@@ -25,12 +26,12 @@ const Header = () => {
           <Logo />
         </LogoWrapper>
         <DesktopNav>
-          <NavLink href="/sale">Sale</NavLink>
-          <NavLink href="/new">New&nbsp;Releases</NavLink>
-          <NavLink href="/men">Men</NavLink>
-          <NavLink href="/women">Women</NavLink>
-          <NavLink href="/kids">Kids</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
+          <NavLink path="/sale" title="Sale" />
+          <NavLink path="/new" title="New&nbsp;Releases" />
+          <NavLink path="/men" title="Men" />
+          <NavLink path="/women" title="Women" />
+          <NavLink path="/kids" title="Kids" />
+          <NavLink path="/collections" title="Collections" />
         </DesktopNav>
 
         <SmallScreenNav>
@@ -109,17 +110,5 @@ const Spacer = styled.div`
     display: none;
   }
 `
-
-const NavLink = styled.a`
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--color-gray-900);
-  font-weight: var(--font-weight-medium);
-
-  &:hover {
-    color: var(--color-secondary);
-  }
-`;
 
 export default Header;
