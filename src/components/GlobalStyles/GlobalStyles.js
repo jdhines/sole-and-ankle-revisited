@@ -74,6 +74,7 @@ html {
   --reach-dialog: 1;
   --color-white: hsl(${COLORS.white});
   --color-primary: hsl(${COLORS.primary});
+  --color-primary-bright: hsl(${COLORS.primaryBright});
   --color-secondary: hsl(${COLORS.secondary});
   --color-gray-100: hsl(${COLORS.gray[100]});
   --color-gray-300: hsl(${COLORS.gray[300]});

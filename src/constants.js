@@ -8,6 +8,7 @@ export const COLORS = {
     900: '220deg 3% 20%',
   },
   primary: '340deg 65% 47%',
+  primaryBright: '340deg, 93%, 59%',
   secondary: '240deg 60% 63%',
 };
 
