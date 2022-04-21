@@ -50,7 +50,7 @@ const Overlay = styled(DialogOverlay)`
   right: 0;
   bottom: 0;
   background: var(--modal-overlay-color);
-
+  animation: fade-in 500ms ease-in-out;
 `;
 
 const Content = styled(DialogContent)`
@@ -62,12 +62,21 @@ const Content = styled(DialogContent)`
   right: 0;
   padding: 10px 4px 32px 32px;
   background: white;
+
+  @media(prefers-reduced-motion: no-preference) {
+    animation: slide-in 400ms ease-out;
+  }
+  @media(prefers-reduced-motion: reduce) {
+    animation: fade-in 500ms ease;
+  }
 `
 
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  animation: both fade-in 500ms ease;
+  animation-delay: 350ms;
 `
 const NavLink = styled.a`
   font-size: 1.125rem;
@@ -90,6 +99,8 @@ const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  animation: both fade-in 500ms ease ;
+  animation-delay: 500ms;
 `
 
 const FooterLink = styled.a`
